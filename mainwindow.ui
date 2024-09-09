@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>二维矢量图形绘制系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="DrawWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>6</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuShapes">
+    <property name="title">
+     <string>绘制</string>
+    </property>
+    <addaction name="actionLine"/>
+    <addaction name="actionRectangle"/>
+    <addaction name="actionEllipse"/>
+    <addaction name="actionPolygon"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionSelect"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionMove"/>
+    <addaction name="actionChangeColor"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>属性</string>
+    </property>
+    <addaction name="actionCalculateArea"/>
+    <addaction name="actionCalculateLength"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionNewCanvas"/>
+    <addaction name="actionOpenCanvas"/>
+    <addaction name="actionSaveCanvas"/>
+   </widget>
+   <addaction name="menu_2"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuShapes"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLine">
+   <property name="text">
+    <string>直线</string>
+   </property>
+  </action>
+  <action name="actionRectangle">
+   <property name="text">
+    <string>矩形</string>
+   </property>
+  </action>
+  <action name="actionEllipse">
+   <property name="text">
+    <string>椭圆</string>
+   </property>
+  </action>
+  <action name="actionPolygon">
+   <property name="text">
+    <string>多边形</string>
+   </property>
+  </action>
+  <action name="actionFill">
+   <property name="text">
+    <string>矩形(满)</string>
+   </property>
+  </action>
+  <action name="actionSelect">
+   <property name="text">
+    <string>选中</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="actionMove">
+   <property name="text">
+    <string>移动</string>
+   </property>
+  </action>
+  <action name="actionChangeColor">
+   <property name="text">
+    <string>改色</string>
+   </property>
+  </action>
+  <action name="actionCalculateArea">
+   <property name="text">
+    <string>计算面积</string>
+   </property>
+  </action>
+  <action name="actionCalculateLength">
+   <property name="text">
+    <string>计算长度</string>
+   </property>
+  </action>
+  <action name="actionNewCanvas">
+   <property name="text">
+    <string>New File</string>
+   </property>
+  </action>
+  <action name="actionOpenCanvas">
+   <property name="text">
+    <string>Open File</string>
+   </property>
+  </action>
+  <action name="actionSaveCanvas">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DrawWidget</class>
+   <extends>QWidget</extends>
+   <header>drawwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
